@@ -10,3 +10,6 @@
 [submodule "polarizer"]
 	path = polarizer
 	url = https://github.com/RedHatQE/polarizer.git
+[submodule "testmoapp"]
+	path = testmoapp
+	url = https://github.com/testmoapp/junitxml.git

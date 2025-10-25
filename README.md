@@ -66,6 +66,30 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 - Polarion modified xUnit with CI/CD metadata
 - Test run configuration examples
 
+### testmoapp (Reference Documentation)
+
+**Repository**: https://github.com/testmoapp/junitxml
+**Path**: `testmoapp/`
+**Description**: JUnit XML file format reference guide and examples
+**Maintained By**: Testmo (testmoapp)
+**Key Features**:
+- Comprehensive JUnit XML format documentation
+- De facto standard format conventions
+- Multiple example files covering common use cases
+- Format specification and best practices
+
+**Key Files**:
+- `examples/junit-basic.xml` - Basic JUnit XML structure
+- `examples/junit-complete.xml` - Complete example with all elements
+- `examples/testcase-properties.xml` - Test case properties
+- `examples/testcase-output.xml` - System output capture
+- `examples/conventions.xml` - Common conventions and patterns
+
+**Relevant Formats**:
+- Standard JUnit XML format baseline
+- Common conventions across testing tools
+- CI/CD integration patterns
+
 ## Usage
 
 ### Initial Clone
@@ -109,6 +133,31 @@ cat polarize/README.md
 ls polarizer/src/
 ```
 
+#### Testmoapp Reference Examples
+
+```bash
+# View all example files
+ls testmoapp/examples/
+
+# Basic JUnit XML structure
+cat testmoapp/examples/junit-basic.xml
+
+# Complete example with all elements
+cat testmoapp/examples/junit-complete.xml
+
+# Test case properties
+cat testmoapp/examples/testcase-properties.xml
+
+# System output capture
+cat testmoapp/examples/testcase-output.xml
+
+# Common conventions
+cat testmoapp/examples/conventions.xml
+
+# Read comprehensive format documentation
+cat testmoapp/README.md
+```
+
 ## Contributing Patterns to Jux
 
 When adding new test fixtures to Jux based on these examples:
@@ -119,6 +168,7 @@ When adding new test fixtures to Jux based on these examples:
 4. Place in appropriate `test/fixtures/junit_xml/` subdirectories:
    - `pytest/` for pytest examples
    - `polarion/` for Polarion examples
+   - `testmoapp/` for reference format examples
 
 ## License Notes
 
@@ -128,6 +178,7 @@ Each submodule has its own license. Please review individual project licenses be
 - **dump2polarion**: GPL-2.0 License
 - **polarize**: Apache License 2.0
 - **polarizer**: Apache License 2.0
+- **testmoapp**: MIT License
 
 When extracting examples for Jux test fixtures, ensure compliance with source project licenses.
 
