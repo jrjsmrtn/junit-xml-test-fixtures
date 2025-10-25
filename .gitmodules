@@ -13,3 +13,21 @@
 [submodule "testmoapp"]
 	path = testmoapp
 	url = https://github.com/testmoapp/junitxml.git
+[submodule "windyroad-junit-schema"]
+	path = windyroad-junit-schema
+	url = https://github.com/windyroad/JUnit-Schema.git
+[submodule "jenkinsci-xunit-plugin"]
+	path = jenkinsci-xunit-plugin
+	url = https://github.com/jenkinsci/xunit-plugin.git
+[submodule "junit5"]
+	path = junit5
+	url = https://github.com/junit-team/junit5.git
+[submodule "cucumber-junit-xml-formatter"]
+	path = cucumber-junit-xml-formatter
+	url = https://github.com/cucumber/junit-xml-formatter.git
+[submodule "jest-junit"]
+	path = jest-junit
+	url = https://github.com/jest-community/jest-junit.git
+[submodule "karma-junit-reporter"]
+	path = karma-junit-reporter
+	url = https://github.com/karma-runner/karma-junit-reporter.git

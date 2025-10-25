@@ -8,7 +8,53 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 
 ## Submodules
 
-### pytest (Official)
+### Schema Definitions
+
+#### windyroad/JUnit-Schema (Apache Ant XSD)
+
+**Repository**: https://github.com/windyroad/JUnit-Schema
+**Path**: `windyroad-junit-schema/`
+**Description**: Most widely referenced XSD for Apache Ant's JUnit output format
+**Maintained By**: Tom Howard (windyroad)
+**Key Files**:
+- `JUnit.xsd` - XML Schema Definition for JUnit XML format
+- `jenkins-junit.xsd` - Jenkins-compatible variant
+
+**Relevant Formats**:
+- Apache Ant JUnit XML format (de facto standard)
+- Used by junitparser and many validation tools
+
+#### jenkinsci/xunit-plugin (Jenkins XSD)
+
+**Repository**: https://github.com/jenkinsci/xunit-plugin
+**Path**: `jenkinsci-xunit-plugin/`
+**Description**: Jenkins xUnit plugin with multiple JUnit XSD versions
+**Maintained By**: Jenkins CI community
+**Key Files**:
+- `src/main/resources/org/jenkinsci/plugins/xunit/types/model/xsd/junit-10.xsd` - Latest schema
+- `src/main/resources/org/jenkinsci/plugins/xunit/types/model/xsd/junit-*.xsd` - Historical versions
+
+**Relevant Formats**:
+- Jenkins JUnit XML format (widely used in CI/CD)
+- Multiple schema versions for backward compatibility
+- Supports Ant JUnit and Maven Surefire formats
+
+#### junit5 (Official JUnit 5)
+
+**Repository**: https://github.com/junit-team/junit5
+**Path**: `junit5/`
+**Description**: Official JUnit 5 repository with Jenkins-compatible XSD
+**Maintained By**: JUnit team
+**Key Files**:
+- `platform-tests/src/test/resources/jenkins-junit.xsd` - XSD used in JUnit 5 tests
+
+**Relevant Formats**:
+- Jenkins JUnit XML format (MIT License)
+- Reference implementation from official JUnit team
+
+### Testing Framework Implementations
+
+#### pytest (Official)
 
 **Repository**: https://github.com/pytest-dev/pytest
 **Path**: `pytest/`
@@ -90,6 +136,50 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 - Common conventions across testing tools
 - CI/CD integration patterns
 
+### JavaScript/BDD Frameworks
+
+#### cucumber/junit-xml-formatter (BDD Testing)
+
+**Repository**: https://github.com/cucumber/junit-xml-formatter
+**Path**: `cucumber-junit-xml-formatter/`
+**Description**: Cucumber JUnit XML formatter for reporting BDD test results
+**Maintained By**: Cucumber community
+**Key Files**:
+- `jenkins-junit.xsd` - Jenkins-compatible JUnit XSD
+- Cucumber Gherkin to JUnit XML transformation
+
+**Relevant Formats**:
+- BDD/Gherkin scenarios as JUnit XML
+- Jenkins-compatible format
+
+#### jest-community/jest-junit (JavaScript Testing)
+
+**Repository**: https://github.com/jest-community/jest-junit
+**Path**: `jest-junit/`
+**Description**: Jest reporter creating compatible JUnit XML files
+**Maintained By**: Jest community
+**Key Files**:
+- `__tests__/lib/junit.xsd` - JUnit XSD for validation
+- Jest test results to JUnit XML transformation
+
+**Relevant Formats**:
+- JavaScript/Node.js test framework output
+- Jenkins CI dtkit format
+
+#### karma-runner/karma-junit-reporter (Browser Testing)
+
+**Repository**: https://github.com/karma-runner/karma-junit-reporter
+**Path**: `karma-junit-reporter/`
+**Description**: Karma plugin for JUnit XML reporting
+**Maintained By**: Karma community
+**Key Files**:
+- `junit-schema.xsd` - JUnit schema definition
+- Browser test runner JUnit XML output
+
+**Relevant Formats**:
+- Browser-based JavaScript testing
+- Karma test runner format
+
 ## Usage
 
 ### Initial Clone
@@ -107,6 +197,20 @@ git submodule update --remote --merge
 ```
 
 ### Finding Examples
+
+#### Schema Definitions
+
+```bash
+# windyroad Apache Ant XSD
+cat windyroad-junit-schema/JUnit.xsd
+
+# Jenkins xUnit plugin XSDs
+ls jenkinsci-xunit-plugin/src/main/resources/org/jenkinsci/plugins/xunit/types/model/xsd/
+cat jenkinsci-xunit-plugin/src/main/resources/org/jenkinsci/plugins/xunit/types/model/xsd/junit-10.xsd
+
+# JUnit 5 official Jenkins-compatible XSD
+cat junit5/platform-tests/src/test/resources/jenkins-junit.xsd
+```
 
 #### pytest xunit1/xunit2 Examples
 
@@ -158,6 +262,22 @@ cat testmoapp/examples/conventions.xml
 cat testmoapp/README.md
 ```
 
+#### JavaScript/BDD Framework Examples
+
+```bash
+# Cucumber BDD JUnit XML
+cat cucumber-junit-xml-formatter/jenkins-junit.xsd
+ls cucumber-junit-xml-formatter/test/
+
+# Jest JavaScript testing
+cat jest-junit/__tests__/lib/junit.xsd
+ls jest-junit/__tests__/
+
+# Karma browser testing
+cat karma-junit-reporter/junit-schema.xsd
+ls karma-junit-reporter/test/
+```
+
 ## Contributing Patterns to Jux
 
 When adding new test fixtures to Jux based on these examples:
@@ -174,11 +294,22 @@ When adding new test fixtures to Jux based on these examples:
 
 Each submodule has its own license. Please review individual project licenses before using examples:
 
+**Schema Definitions**:
+- **windyroad-junit-schema**: Apache License 2.0
+- **jenkinsci-xunit-plugin**: MIT License
+- **junit5**: Eclipse Public License 2.0
+
+**Testing Frameworks**:
 - **pytest**: MIT License
 - **dump2polarion**: GPL-2.0 License
 - **polarize**: Apache License 2.0
 - **polarizer**: Apache License 2.0
 - **testmoapp**: MIT License
+
+**JavaScript/BDD Frameworks**:
+- **cucumber-junit-xml-formatter**: MIT License
+- **jest-junit**: Apache License 2.0
+- **karma-junit-reporter**: MIT License
 
 When extracting examples for Jux test fixtures, ensure compliance with source project licenses.
 
