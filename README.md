@@ -292,24 +292,26 @@ When adding new test fixtures to Jux based on these examples:
 
 ## License Notes
 
-Each submodule has its own license. Please review individual project licenses before using examples:
+Each submodule has its own license. All included submodules use permissive licenses compatible with Apache-2.0:
 
 **Schema Definitions**:
 - **windyroad-junit-schema**: Apache License 2.0
-- **jenkinsci-xunit-plugin**: MIT License
 - **junit5**: Eclipse Public License 2.0
 
 **Testing Frameworks**:
 - **pytest**: MIT License
-- **dump2polarion**: GPL-2.0 License
-- **polarize**: Apache License 2.0
-- **polarizer**: Apache License 2.0
-- **testmoapp**: MIT License
 
 **JavaScript/BDD Frameworks**:
 - **cucumber-junit-xml-formatter**: MIT License
 - **jest-junit**: Apache License 2.0
 - **karma-junit-reporter**: MIT License
+
+**Removed Submodules** (documentation retained for reference):
+- **dump2polarion**: Removed (GPL-2.0 - copyleft, incompatible with Apache-2.0)
+- **polarize**: Removed (GPL-3.0 - copyleft, incompatible with Apache-2.0)
+- **polarizer**: Removed (GPL-3.0 - copyleft, incompatible with Apache-2.0)
+- **testmoapp**: Removed (no license specified - all rights reserved)
+- **jenkinsci-xunit-plugin**: Removed (no license specified - all rights reserved)
 
 When extracting examples for Jux test fixtures, ensure compliance with source project licenses.
 
@@ -317,5 +319,5 @@ When extracting examples for Jux test fixtures, ensure compliance with source pr
 
 This repository is maintained as part of the Jux project for reference purposes only. The submodules are not modified - they serve as upstream references for JUnit XML format validation.
 
-**Last Updated**: 2025-10-25
+**Last Updated**: 2026-01-20
 **Maintainer**: Jux project team
