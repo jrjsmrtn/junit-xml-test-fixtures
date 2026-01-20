@@ -26,6 +26,27 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 - [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/)
 - [Maven Surefire Report Plugin](https://maven.apache.org/surefire/maven-surefire-report-plugin/)
 
+#### xUnit.net XML Format v2
+
+**URL**: https://xunit.net/docs/format-xml-v2
+**Description**: XML report format for xUnit.net test framework (.NET)
+**Maintained By**: xUnit.net project
+**License**: Apache License 2.0
+
+**Relevant Formats**:
+- xUnit.net v2+ test reports
+- .NET unit testing framework output
+- Supports XSL-T transformations to HTML and NUnit formats
+
+**Key Elements**:
+- `<assemblies>` root element with `schema-version` attribute
+- `<assembly>` elements for each test assembly
+- `<collection>` grouping for test classes
+- `<test>` elements with rich metadata
+
+**Documentation**:
+- [xUnit.net XML Format v2](https://xunit.net/docs/format-xml-v2)
+
 #### windyroad/JUnit-Schema (Apache Ant XSD)
 
 **Repository**: https://github.com/windyroad/JUnit-Schema
