@@ -1,18 +1,9 @@
 [submodule "pytest"]
 	path = pytest
 	url = https://github.com/pytest-dev/pytest.git
-[submodule "polarize"]
-	path = polarize
-	url = https://github.com/RedHatQE/polarize.git
-[submodule "polarizer"]
-	path = polarizer
-	url = https://github.com/RedHatQE/polarizer.git
 [submodule "windyroad-junit-schema"]
 	path = windyroad-junit-schema
 	url = https://github.com/windyroad/JUnit-Schema.git
-[submodule "jenkinsci-xunit-plugin"]
-	path = jenkinsci-xunit-plugin
-	url = https://github.com/jenkinsci/xunit-plugin.git
 [submodule "junit5"]
 	path = junit5
 	url = https://github.com/junit-team/junit5.git
