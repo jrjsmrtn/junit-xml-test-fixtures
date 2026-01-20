@@ -16,3 +16,6 @@
 [submodule "karma-junit-reporter"]
 	path = karma-junit-reporter
 	url = https://github.com/karma-runner/karma-junit-reporter.git
+[submodule "python-polarion"]
+	path = python-polarion
+	url = https://github.com/jesper-raemaekers/python-polarion.git

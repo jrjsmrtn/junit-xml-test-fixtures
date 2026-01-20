@@ -69,10 +69,27 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 - pytest xunit1 (legacy format with `junit_family=xunit1`)
 - pytest xunit2 (modern format with `junit_family=xunit2`)
 
-### Polarion Tools — REMOVED
+### Polarion Tools
 
-> **Note**: These submodules were removed due to GPL licensing (incompatible with Apache-2.0).
-> Documentation retained for reference only.
+#### python-polarion (Community - Python)
+
+**Repository**: https://github.com/jesper-raemaekers/python-polarion
+**Path**: `python-polarion/`
+**Description**: Python client library for Polarion ALM with xUnit XML import support
+**Maintained By**: Jesper Raemaekers
+**License**: MIT
+**Key Files**:
+- `polarion/xml.py` — XML import functionality
+- `polarion/record.py` — Test record handling
+
+**Key Features**:
+- Polarion REST API client
+- xUnit XML import to test runs
+- Work item and test case management
+
+**Relevant Formats**:
+- Polarion xUnit XML with custom properties
+- Test run result imports
 
 #### Polarion xUnit XML Schema References
 
@@ -96,7 +113,12 @@ Polarion uses the standard JUnit XML schema with custom properties for ALM integ
 - [Siemens Polarion xUnit file example](https://docs.sw.siemens.com/en-US/doc/230235217/PL20190701144002440.xid1465510/xid1603675)
 - [Betelgeuse Documentation](https://betelgeuse.readthedocs.io/en/stable/) — Python test case XML generator
 
-#### dump2polarion (Community - Python) — REMOVED
+#### Other Polarion Tools — REMOVED
+
+> **Note**: These tools were removed due to GPL licensing (incompatible with Apache-2.0).
+> Documentation retained for reference only.
+
+##### dump2polarion (Community - Python) — REMOVED
 
 **Repository**: https://github.com/mkoura/dump2polarion
 **License**: GPL-2.0 (removed)
@@ -111,7 +133,7 @@ Polarion uses the standard JUnit XML schema with custom properties for ALM integ
 - Polarion modified xUnit with custom properties
 - Requirements traceability examples
 
-#### polarize (Community - Java) — REMOVED
+##### polarize (Community - Java) — REMOVED
 
 **Repository**: https://github.com/RedHatQE/polarize
 **License**: GPL-3.0 (removed)
@@ -126,7 +148,7 @@ Polarion uses the standard JUnit XML schema with custom properties for ALM integ
 - Polarion modified xUnit from Java/TestNG
 - Custom property mappings
 
-#### polarizer (Community - Java) — REMOVED
+##### polarizer (Community - Java) — REMOVED
 
 **Repository**: https://github.com/RedHatQE/polarizer
 **License**: GPL-3.0 (removed)
@@ -275,6 +297,7 @@ When adding new test fixtures to Jux based on these examples:
 3. Add XML comments explaining format-specific features
 4. Place in appropriate `test/fixtures/junit_xml/` subdirectories:
    - `pytest/` for pytest examples
+   - `polarion/` for Polarion xUnit examples
    - `javascript/` for Jest, Karma, Cucumber examples
    - `schema/` for XSD schema definitions
 
@@ -288,6 +311,9 @@ Each submodule has its own license. All included submodules use permissive licen
 
 **Testing Frameworks**:
 - **pytest**: MIT License
+
+**Polarion Tools**:
+- **python-polarion**: MIT License
 
 **JavaScript/BDD Frameworks**:
 - **cucumber-junit-xml-formatter**: MIT License
