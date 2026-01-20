@@ -10,6 +10,22 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 
 ### Schema Definitions
 
+#### Maven Surefire XSD (Official Apache)
+
+**URL**: https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd
+**Description**: Official XML Schema for Maven Surefire test reports
+**Maintained By**: Apache Maven project
+**License**: Apache License 2.0
+
+**Relevant Formats**:
+- Maven Surefire/Failsafe test reports
+- Standard format for Java projects using Maven
+- Generated in `target/surefire-reports/TEST-*.xml`
+
+**Documentation**:
+- [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/)
+- [Maven Surefire Report Plugin](https://maven.apache.org/surefire/maven-surefire-report-plugin/)
+
 #### windyroad/JUnit-Schema (Apache Ant XSD)
 
 **Repository**: https://github.com/windyroad/JUnit-Schema
