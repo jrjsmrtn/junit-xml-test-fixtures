@@ -1,9 +1,6 @@
 [submodule "pytest"]
 	path = pytest
 	url = https://github.com/pytest-dev/pytest.git
-[submodule "dump2polarion"]
-	path = dump2polarion
-	url = https://github.com/mkoura/dump2polarion.git
 [submodule "polarize"]
 	path = polarize
 	url = https://github.com/RedHatQE/polarize.git
