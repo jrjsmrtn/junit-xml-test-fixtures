@@ -24,13 +24,15 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 - Apache Ant JUnit XML format (de facto standard)
 - Used by junitparser and many validation tools
 
-#### jenkinsci/xunit-plugin (Jenkins XSD)
+#### jenkinsci/xunit-plugin (Jenkins XSD) — REMOVED
+
+> **Note**: This submodule was removed due to no license specified (all rights reserved).
+> Documentation retained for reference only.
 
 **Repository**: https://github.com/jenkinsci/xunit-plugin
-**Path**: `jenkinsci-xunit-plugin/`
 **Description**: Jenkins xUnit plugin with multiple JUnit XSD versions
 **Maintained By**: Jenkins CI community
-**Key Files**:
+**Key Files** (in upstream repository):
 - `src/main/resources/org/jenkinsci/plugins/xunit/types/model/xsd/junit-10.xsd` - Latest schema
 - `src/main/resources/org/jenkinsci/plugins/xunit/types/model/xsd/junit-*.xsd` - Historical versions
 
@@ -67,10 +69,16 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 - pytest xunit1 (legacy format with `junit_family=xunit1`)
 - pytest xunit2 (modern format with `junit_family=xunit2`)
 
-### dump2polarion (Community)
+### Polarion Tools — REMOVED
+
+> **Note**: These submodules were removed due to GPL licensing (incompatible with Apache-2.0).
+> Documentation retained for reference only. For Polarion xUnit XML format details,
+> see the [Polarion documentation](https://polarion.plm.automation.siemens.com/documentation).
+
+#### dump2polarion (Community - Python) — REMOVED
 
 **Repository**: https://github.com/mkoura/dump2polarion
-**Path**: `dump2polarion/`
+**License**: GPL-2.0 (removed)
 **Description**: Python tool for generating Polarion-compatible xUnit XML
 **Maintained By**: Martin Kourim
 **Key Features**:
@@ -82,10 +90,10 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 - Polarion modified xUnit with custom properties
 - Requirements traceability examples
 
-### polarize (Community - Java)
+#### polarize (Community - Java) — REMOVED
 
 **Repository**: https://github.com/RedHatQE/polarize
-**Path**: `polarize/`
+**License**: GPL-3.0 (removed)
 **Description**: Java library for generating Polarion-compatible test metadata
 **Maintained By**: Red Hat QE
 **Key Features**:
@@ -97,10 +105,10 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 - Polarion modified xUnit from Java/TestNG
 - Custom property mappings
 
-### polarizer (Community - Java)
+#### polarizer (Community - Java) — REMOVED
 
 **Repository**: https://github.com/RedHatQE/polarizer
-**Path**: `polarizer/`
+**License**: GPL-3.0 (removed)
 **Description**: Another Red Hat project for Polarion test automation
 **Maintained By**: Red Hat QE
 **Key Features**:
@@ -112,10 +120,13 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 - Polarion modified xUnit with CI/CD metadata
 - Test run configuration examples
 
-### testmoapp (Reference Documentation)
+### testmoapp (Reference Documentation) — REMOVED
+
+> **Note**: This submodule was removed due to no license specified (all rights reserved).
+> Documentation retained for reference only. Visit https://github.com/testmoapp/junitxml
+> for comprehensive JUnit XML format documentation.
 
 **Repository**: https://github.com/testmoapp/junitxml
-**Path**: `testmoapp/`
 **Description**: JUnit XML file format reference guide and examples
 **Maintained By**: Testmo (testmoapp)
 **Key Features**:
@@ -124,7 +135,7 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 - Multiple example files covering common use cases
 - Format specification and best practices
 
-**Key Files**:
+**Key Files** (in upstream repository):
 - `examples/junit-basic.xml` - Basic JUnit XML structure
 - `examples/junit-complete.xml` - Complete example with all elements
 - `examples/testcase-properties.xml` - Test case properties
@@ -204,10 +215,6 @@ git submodule update --remote --merge
 # windyroad Apache Ant XSD
 cat windyroad-junit-schema/JUnit.xsd
 
-# Jenkins xUnit plugin XSDs
-ls jenkinsci-xunit-plugin/src/main/resources/org/jenkinsci/plugins/xunit/types/model/xsd/
-cat jenkinsci-xunit-plugin/src/main/resources/org/jenkinsci/plugins/xunit/types/model/xsd/junit-10.xsd
-
 # JUnit 5 official Jenkins-compatible XSD
 cat junit5/platform-tests/src/test/resources/jenkins-junit.xsd
 ```
@@ -220,46 +227,6 @@ cat pytest/testing/test_junitxml.py
 
 # View pytest JUnit XML implementation
 cat pytest/src/_pytest/junitxml.py
-```
-
-#### Polarion Examples
-
-```bash
-# Python examples
-ls dump2polarion/tests/
-cat dump2polarion/dump2polarion/exporter.py
-
-# Java examples
-ls polarize/src/
-cat polarize/README.md
-
-# Alternative Java implementation
-ls polarizer/src/
-```
-
-#### Testmoapp Reference Examples
-
-```bash
-# View all example files
-ls testmoapp/examples/
-
-# Basic JUnit XML structure
-cat testmoapp/examples/junit-basic.xml
-
-# Complete example with all elements
-cat testmoapp/examples/junit-complete.xml
-
-# Test case properties
-cat testmoapp/examples/testcase-properties.xml
-
-# System output capture
-cat testmoapp/examples/testcase-output.xml
-
-# Common conventions
-cat testmoapp/examples/conventions.xml
-
-# Read comprehensive format documentation
-cat testmoapp/README.md
 ```
 
 #### JavaScript/BDD Framework Examples
@@ -287,8 +254,8 @@ When adding new test fixtures to Jux based on these examples:
 3. Add XML comments explaining format-specific features
 4. Place in appropriate `test/fixtures/junit_xml/` subdirectories:
    - `pytest/` for pytest examples
-   - `polarion/` for Polarion examples
-   - `testmoapp/` for reference format examples
+   - `javascript/` for Jest, Karma, Cucumber examples
+   - `schema/` for XSD schema definitions
 
 ## License Notes
 
