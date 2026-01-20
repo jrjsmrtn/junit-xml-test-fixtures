@@ -47,6 +47,27 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 **Documentation**:
 - [xUnit.net XML Format v2](https://xunit.net/docs/format-xml-v2)
 
+#### NUnit XML Format
+
+**URL**: https://docs.nunit.org/articles/nunit/technical-notes/usage/Test-Result-XML-Format.html
+**Description**: XML report format for NUnit test framework (.NET)
+**Maintained By**: NUnit project
+**License**: MIT License
+
+**Relevant Formats**:
+- NUnit 3.x test reports (different from NUnit 2.x format)
+- .NET unit testing framework output
+- Supported by many CI/CD tools
+
+**Key Elements**:
+- `<test-run>` root element with run metadata
+- `<test-suite>` elements for test fixtures and namespaces
+- `<test-case>` elements with result, duration, assertions
+- `<output>` for captured stdout/stderr
+
+**Documentation**:
+- [NUnit Test Result XML Format](https://docs.nunit.org/articles/nunit/technical-notes/usage/Test-Result-XML-Format.html)
+
 #### windyroad/JUnit-Schema (Apache Ant XSD)
 
 **Repository**: https://github.com/windyroad/JUnit-Schema
