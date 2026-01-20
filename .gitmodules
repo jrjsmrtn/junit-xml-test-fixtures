@@ -7,9 +7,6 @@
 [submodule "polarizer"]
 	path = polarizer
 	url = https://github.com/RedHatQE/polarizer.git
-[submodule "testmoapp"]
-	path = testmoapp
-	url = https://github.com/testmoapp/junitxml.git
 [submodule "windyroad-junit-schema"]
 	path = windyroad-junit-schema
 	url = https://github.com/windyroad/JUnit-Schema.git
