@@ -72,8 +72,29 @@ Centralized collection of real-world JUnit XML examples to inform and validate t
 ### Polarion Tools — REMOVED
 
 > **Note**: These submodules were removed due to GPL licensing (incompatible with Apache-2.0).
-> Documentation retained for reference only. For Polarion xUnit XML format details,
-> see the [Polarion documentation](https://polarion.plm.automation.siemens.com/documentation).
+> Documentation retained for reference only.
+
+#### Polarion xUnit XML Schema References
+
+Polarion uses the standard JUnit XML schema with custom properties for ALM integration.
+
+**Schema Definition**:
+- Polarion references the [windyroad JUnit.xsd](https://github.com/windyroad/JUnit-Schema/blob/master/JUnit.xsd) as its base schema
+- See also: [python-polarion XML documentation](https://python-polarion.readthedocs.io/en/latest/xml.html)
+
+**Polarion-Specific Properties** (testsuite level):
+- `polarion-project-id` — Polarion project identifier
+- `polarion-testrun-id` — Test run identifier
+- `polarion-testrun-title` — Test run title
+- `polarion-user-id` — User identifier for import
+
+**Polarion-Specific Properties** (testcase level):
+- `polarion-testcase-id` — Links test to Polarion test case
+- `verifies` — Links test to requirements (e.g., `REQ-001`)
+
+**Official Documentation**:
+- [Siemens Polarion xUnit file example](https://docs.sw.siemens.com/en-US/doc/230235217/PL20190701144002440.xid1465510/xid1603675)
+- [Betelgeuse Documentation](https://betelgeuse.readthedocs.io/en/stable/) — Python test case XML generator
 
 #### dump2polarion (Community - Python) — REMOVED
 
